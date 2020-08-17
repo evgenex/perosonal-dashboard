@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
   //res.send('get teg')
 });
 
+app.use('/api/feeds', require('./controllers/feeds'));
 app.use('/api/todos', require('./controllers/todos'));
 app.use('/api/users', require('./controllers/users'));
 app.use('/api/photos', require('./controllers/photos'));

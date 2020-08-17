@@ -15,7 +15,7 @@ class Sport extends Component {
   }
 
   getData=async()=>{
-    const url = 'http://www.football-data.co.uk/mmz4281/1718/I1.csv';
+    const url = 'http://localhost:5000/api/feeds/sport'
     fetch(url)
       .then(response => response.text())
       .then(str => { 

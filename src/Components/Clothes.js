@@ -12,7 +12,8 @@ class Clothes extends Component {
     this.getData();
   }
   getData = async () => {
-    const url = 'https://therapy-box.co.uk/hackathon/clothing-api.php?username=swapnil';
+    //const url = 'https://therapy-box.co.uk/hackathon/clothing-api.php?username=swapnil';
+    const url = 'http://localhost:5000/api/feeds/clothes';
     fetch(url)
       .then(response => response.json())
       .then(data => this.setData(data.payload));

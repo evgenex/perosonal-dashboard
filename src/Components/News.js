@@ -16,14 +16,8 @@ class News extends Component {
   }
 
   getData=async()=>{
-    const url = `http://feeds.bbci.co.uk/news/rss.xml`;
-    fetch(url, {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-        "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-      }
-    })
+    const url = 'http://localhost:5000/api/feeds/news';
+    fetch(url)
       .then(response => response.text())
       .then(str => { 
         parseString(str, (err, result)=> { 
