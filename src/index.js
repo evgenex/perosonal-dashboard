@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { observer, Provider } from 'mobx-react'
+import AppState from './AppState';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider appState={new AppState()}>
+        <App/>
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

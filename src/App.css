@@ -1,38 +1,212 @@
 .App {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.Background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.Content {
+  min-height: 100%;
+  padding: 3rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p{
+  color:white;
+  font-size: 1.2rem;
+}
+a {
+  color: yellow;
+  cursor: pointer;
+}
+button{
+  background-color:transparent;
+  border: none;
+  cursor: pointer;
+}
+button:focus{
+  outline: none;
+}
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid white;
+  color:white;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+input:focus{
+  outline: none;
+  border-bottom: 2px solid white;
+}
+*::-webkit-input-placeholder {
+  color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* FireFox 4-18 */
+*:-moz-placeholder {
+  color: whitesmoke;
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Firefox 19+ */
+*::-moz-placeholder {
+  color: whitesmoke;
+  opacity: 1;
+}
+
+/* Internet Explorer 10+ */
+*:-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+/* Microsoft Edge */
+*::-ms-input-placeholder {
+  color: whitesmoke;
+}
+.Header {
+  color: white;
+  font-size: 6vw;
+}
+.LoginForm{
+  height: calc(100vh - 30rem);
+  padding: 4rem;
+}
+.LoginFormRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.LoginButtons{
+  height: 6rem;
+}
+.Thumb{
+  height: 14rem;
+  width: 19rem;
+  text-align: left;
+}
+.ThumbContainerBackground{
+  position: absolute;
+  height: 14rem;
+  width: 19rem;
+  z-index: -1;
+}
+.ThumbTitle{
+  height: 4rem;
+  width: 19rem;
+  text-align: center;
+  color: black;
+  font-size: 1.6rem;
+  padding: .4rem;
+}
+.Home{
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.ThumbsWrapper{
+  flex: 1 0 20%;
+  margin: 3rem;
+}
+.Preview{
+  text-align: center;
+  height: 12rem;
+  max-width: 19rem;
+  font-size: 1.4rem;
+  color: black;
+}
+.PreviewTitle {
+  font-size: 1.4rem;
+  color: black;
+}
+.PreviewText{
+  font-size: 1.2rem;
+  color: black;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+.WeatherIcconWrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+.MainTitle{
   color: white;
+  font-size: 1.6rem;
 }
-
-.App-link {
-  color: #61dafb;
+.MainText{
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  max-height: 60vh;
+  overflow-y: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MainImageWrapper{
+  margin-bottom: 2rem;
+}
+.SportStats{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15vw;
+}
+.SportStatsPrev{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.Tasks{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: .5rem 15vw;
+}
+.CheckBoxWrapper{
+  margin-right: 3rem;
+  margin-top: -1.8rem;
+}
+.Checkbox{
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.ChartWrapper{
+  display: flex;
+  justify-content: center;
+}
+.PhotoWrapper{
+  flex: 1 0 20%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 3rem;
+  justify-content: center;
+}
+.Photo{
+  width: 20vw;
+  height: 12vw;
+  margin: 1rem;
+}
+.PhotoThumb{
+  width: 6rem;
+  height: 4rem;
+  margin: .2rem;
+}
+.PhotoButton{
+  cursor: pointer;
+}
+.FileUpload{
+  display: none;
 }
